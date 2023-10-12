@@ -40,14 +40,14 @@ export default function Modal({ currentPokemon, closeModal }) {
             >
               <Dialog.Panel className="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
                 <div className="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
-                  <div className="sm:flex sm:items-start">
-                    <div className="mx-auto flex h-40 w-40 flex-shrink-0 items-center justify-center rounded-full bg-red-100 sm:mx-0 sm:h-24 sm:w-24">
+                  <div className="sm:flex sm:items-start flex justify-between">
+                    <div className="mx-auto flex h-40 w-40 flex-shrink-0 items-center  rounded-full bg-red-100 sm:mx-0 sm:h-24 sm:w-24">
                       <img
                         src={currentPokemon?.sprites?.front_default}
                         alt={currentPokemon?.name}
                       />
                     </div>
-                    <div className="mt-3 flex justify-between sm:ml-4 sm:mt-0 sm:text-left">
+                    <div className="mt-3 flex flex-row justify-between sm:ml-4 sm:mt-0 sm:text-left">
                       <div className="flex flex-row justify-between">
                         <Dialog.Title
                           as="h3"
@@ -57,10 +57,9 @@ export default function Modal({ currentPokemon, closeModal }) {
                         </Dialog.Title>
                         {currentPokemon?.types.map((type, index) => (
                           <p
-                            className={`${type.type.name} text-center uppercase text-white`}
+                            className={`${type.type.name}  uppercase text-white`}
                             key={index}
                           >
-                            {type.type.name}
                           </p>
                         ))}
                       </div>

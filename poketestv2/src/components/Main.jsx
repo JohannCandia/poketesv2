@@ -50,12 +50,15 @@ const Main = () => {
             infoPokemon={(poke) => setPokeDex(poke)}
           />
         </div>
+        <div className="flex justify-center text-white mt-10 p-3">
+
         <button
           onClick={loadMore}
           className="p-2 mt-4 bg-blue-500 text-white rounded"
         >
           Cargar más
         </button>
+        </div>
       </div>
     </>
   );
